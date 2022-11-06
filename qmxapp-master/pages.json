@@ -1,0 +1,679 @@
+{
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+  {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "enablePullDownRefresh": false
+      }
+
+    },
+    {
+      "path": "pages/index/shequ",
+      "style": {
+        "navigationBarTitleText": "社区服务",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "pages/index/search/shequsearch",
+      "style": {
+        "navigationBarTitleText": "社区搜索",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "pages/growup/index",
+      "style": {
+        "navigationBarTitleText": "成长营",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/message/index",
+      "style": {
+        "navigationBarTitleText": "信息",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/videoShow/index",
+      "style": {
+        "navigationBarTitleText": "视频秀",
+        "enablePullDownRefresh": false
+      }
+
+    },{
+      "path": "pages/videoH5/nvueSwiper",
+      "style": {
+        "navigationBarTitleText": "视频秀",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/carPage/index",
+      "style": {
+        "navigationBarTitleText": "购物车",
+				"onReachBottomDistance": 20
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/courseDetail/orderConfirmMore/orderConfirm",
+      "style": {
+        "navigationBarTitleText": "确认订单",
+				"enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineInfo/mineInfo",
+      "style": {
+        "navigationBarTitleText": "个人资料",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/message/msgList/msgList",
+      "style": {
+        "navigationBarTitleText": "消息列表",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/invitefriend/invitefriend",
+      "style": {
+        "navigationBarTitleText": "邀请好友",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/invitefriend/canvas-page",
+      "style": {
+        "navigationBarTitleText": "邀请好友",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/order/order",
+      "style": {
+        "navigationBarTitleText": "全部订单",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/sysSetting/sysSetting",
+      "style": {
+        "navigationBarTitleText": "系统设置",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/backstage",
+      "style": {
+        "navigationBarTitleText": "商家后台",
+        "enablePullDownRefresh": false
+      }
+
+    },{
+      "path": "pages/mine/sysSetting/safeCenter/safeCenter",
+      "style": {
+        "navigationBarTitleText": "安全中心",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/activityCenter/activityCenter",
+      "style": {
+        "navigationBarTitleText": "活动中心",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/activityCenter/vipCardTest/vipCardTest",
+      "style": {
+        "navigationBarTitleText": "会员体验卡",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/activityCenter/activityDetail/activityDetail",
+      "style": {
+        "navigationBarTitleText": "活动详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/search/search",
+      "style": {
+        "navigationBarTitleText": "搜索",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/search/searchResult/searchResult",
+      "style": {
+        "navigationBarTitleText": "搜索结果",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/classSearch/classSearch",
+      "style": {
+        "navigationBarTitleText": "分类搜索",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/order/orderDetail/orderDetail",
+      "style": {
+        "navigationBarTitleText": "订单详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/consultCenter/consultCenter",
+      "style": {
+        "navigationBarTitleText": "咨询中心",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/consultCenter/allConsult/allConsult",
+      "style": {
+        "navigationBarTitleText": "全部咨询",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/consultCenter/consultDetail/consultDetail",
+      "style": {
+        "navigationBarTitleText": "咨询详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/organizationDetail",
+      "style": {
+        "navigationBarTitleText": "机构详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/voucherDetail/voucherDetail",
+      "style": {
+        "navigationBarTitleText": "代金券详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/courseDetail/courseDetail",
+      "style": {
+        "navigationBarTitleText": "课程详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/courseDetail/allComment/allComment",
+      "style": {
+        "navigationBarTitleText": "全部评论",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/courseDetail/orderConfirm/orderConfirm",
+      "style": {
+        "navigationBarTitleText": "确认订单",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/courseDetail/orderConfirm/paySuccess",
+      "style": {
+        "navigationBarTitleText": "支付成功",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/brandIntr/brandIntr",
+      "style": {
+        "navigationBarTitleText": "品牌介绍",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/sysSetting/safeCenter/editPhone/editPhone",
+      "style": {
+        "navigationBarTitleText": "更换手机号",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/sysSetting/safeCenter/emailAddress/emailAddress",
+      "style": {
+        "navigationBarTitleText": "邮箱地址",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/sysSetting/safeCenter/logoutAccount/logoutAccount",
+      "style": {
+        "navigationBarTitleText": "注销账号",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineVideo",
+      "style": {
+        "navigationBarTitleText": "我的视频",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineBlack/mineBlack",
+      "style": {
+        "navigationBarTitleText": "我的拉黑",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineAttention/mineAttention",
+      "style": {
+        "navigationBarTitleText": "我的关注",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineFootprint/mineFootprint",
+      "style": {
+        "navigationBarTitleText": "足迹",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineCollect/mineCollect",
+      "style": {
+        "navigationBarTitleText": "我的收藏",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/integralCenter",
+      "style": {
+        "navigationBarTitleText": "积分中心",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/integral",
+      "style": {
+        "navigationBarTitleText": "积分商品",
+        "enablePullDownRefresh": false
+      }
+    },{
+      "path": "pages/mine/integralCenter/takeAddress/takeAddress",
+      "style": {
+        "navigationBarTitleText": "收货地址",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/takeAddress/createAddress",
+      "style": {
+        "navigationBarTitleText": "新增收货地址",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/salesCenter",
+      "style": {
+        "navigationBarTitleText": "分销中心",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/capital/capital",
+      "style": {
+        "navigationBarTitleText": "资金",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/settleCenter/settleCenter",
+      "style": {
+        "navigationBarTitleText": "结算中心",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/capital/latelyIncome/latelyIncome",
+      "style": {
+        "navigationBarTitleText": "最近收支",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/settleCenter/invitePoster/invitePoster",
+      "style": {
+        "navigationBarTitleText": "邀请海报",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/settleCenter/ranking/ranking",
+      "style": {
+        "navigationBarTitleText": "达人排行榜",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/salesCenter/settleCenter/mineTeam/mineTeam",
+      "style": {
+        "navigationBarTitleText": "我的团队",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/vipTestCard/vipTestCard",
+      "style": {
+        "navigationBarTitleText": "会员体验卡",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/merchantEnter/merchantEnter",
+      "style": {
+        "navigationBarTitleText": "商家入驻",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/merchantEnter/auditError/auditError",
+      "style": {
+        "navigationBarTitleText": "审核失败",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/merchantEnter/auditSuccess/auditSuccess",
+      "style": {
+        "navigationBarTitleText": "审核通过",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/merchantEnter/auditSuccess/bindAccount/bindAccount",
+      "style": {
+        "navigationBarTitleText": "绑定企业账号",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/integralRecord/integralRecord",
+      "style": {
+        "navigationBarTitleText": "积分记录",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/mineGift/mineGift",
+      "style": {
+        "navigationBarTitleText": "我的礼品",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/integralGoodsDetail/integralGoodsDetail",
+      "style": {
+        "navigationBarTitleText": "商品详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVoucher/mineVoucher",
+      "style": {
+        "navigationBarTitleText": "我的代金券",
+        "enablePullDownRefresh": true
+      }
+
+    }, {
+      "path": "pages/growup/courseSchedule/courseSchedule",
+      "style": {
+        "navigationBarTitleText": "课程表",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/growup/courseSchedule/createCourse/createCourse",
+      "style": {
+        "navigationBarTitleText": "添加课程",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+      "style": {
+        "navigationBarTitleText": "头像裁剪",
+        "navigationStyle": "default",
+        "navigationBarBackgroundColor": "#000000"
+      }
+    }, {
+      "path": "pages/mine/agency/agency",
+      "style": {
+        "navigationBarTitleText": "我的选品",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/agency/agencyAdmin/agencyAdmin",
+      "style": {
+        "navigationBarTitleText": "选品库",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/agency/agencyAdmin/agencyDetail",
+      "style": {
+        "navigationBarTitleText": "课程详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/integralCenter/drawTurnplate/drawTurnplate",
+      "style": {
+        "navigationBarTitleText": "积分转盘",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/videoShow/addVideo/addVideo",
+      "style": {
+        "navigationBarTitleText": "视频录制",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/videoShow/addVideo/videoIssue/videoIssue",
+      "style": {
+        "navigationBarTitleText": "发布",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineVideoList/mineVideoList",
+      "style": {
+        "navigationBarTitleText": "我的视频列表",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineVideoListH5/mineVideoList",
+      "style": {
+        "navigationBarTitleText": "我的视频列表",
+        "enablePullDownRefresh": false
+      }
+
+    },{
+      "path": "pages/videoShow/searchVideo/searchVideo",
+      "style": {
+        "navigationBarTitleText": "搜索视频",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/videoShow/report/report",
+      "style": {
+        "navigationBarTitleText": "举报",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/mineCollectVideo/mineCollectVideo",
+      "style": {
+        "navigationBarTitleText": "收藏视频",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVideo/videoDetail/videoDetail",
+      "style": {
+        "navigationBarTitleText": "视频详情",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/selectAddress/selectAddress",
+      "style": {
+        "navigationBarTitleText": "选择地区",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/mine/mineVerification/mineVerification",
+      "style": {
+        "navigationBarTitleText": "我的核销",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/storeSearch/storeSearch",
+      "style": {
+        "navigationBarTitleText": "店铺分类",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/login/agreement",
+      "style": {
+        "navigationBarTitleText": "用户协议",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/message/serveDialog/serveDialog",
+      "style": {
+        "navigationBarTitleText": "客服",
+        "navigationBarTextStyle": "black"
+      }
+
+    } ,  {
+	    "path": "pages/message/serveDialog/psychology",
+	    "style": {
+	      "navigationBarTitleText": "联系客服",
+	      "navigationBarTextStyle": "black"
+	    }
+	  
+	  } , {
+            "path" : "pages/mine/mineVideo/mineFens/mineFens",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的粉丝",
+                "enablePullDownRefresh": false
+            }
+            
+        }, {
+      "path": "pages/mine/mineVerification/h5Qrcode",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/index/organizationDetail/courseDetail/payH5/pay",
+      "style": {
+        "navigationBarTitleText": "支付",
+        "enablePullDownRefresh": false
+      }
+
+    }
+    ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "启明星图",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationStyle": "custom",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor": "#3077FB",
+    // "iconWidth": "22",
+    // "height": "50",
+    "spacing": "0",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "static/tabbar/index.png",
+      "selectedIconPath": "static/tabbar/index-active.png",
+      "text": "首页"
+    }, {
+			// #ifdef H5
+			"pagePath": "pages/videoH5/nvueSwiper",
+			// #endif
+			// #ifdef APP-PLUS
+			"pagePath": "pages/videoShow/index",
+			// #endif
+      "iconPath": "static/tabbar/video.png",
+      "selectedIconPath": "static/tabbar/video-active.png",
+      "text": "视频秀"
+    }, {
+      "pagePath": "pages/growup/index",
+      "iconPath": "static/tabbar/growup.png",
+      "selectedIconPath": "static/tabbar/growup-active.png",
+      "text": "成长营"
+    }, {
+      "pagePath": "pages/message/index",
+      "iconPath": "static/tabbar/message.png",
+      "selectedIconPath": "static/tabbar/message-active.png",
+      "text": "信息"
+    }, {
+      "pagePath": "pages/mine/index",
+      "iconPath": "static/tabbar/mine.png",
+      "selectedIconPath": "static/tabbar/mine-active.png",
+      "text": "我的"
+    }]
+  },
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

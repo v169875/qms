@@ -1,0 +1,206 @@
+<template>
+  <view class="add-video-content">
+    <view class="choose-video-navbar reset-nvue" :style="`width:${boxStyle.width};padding-top:${40 + (topBarHeight * 2)}rpx`">
+      <image class="close-icon" src="@/static/video/close-icon.png" mode="aspectFit" @click="handleCloseVideo()"></image>
+      <text class="navbar-title">发布短视频</text>
+      <image class="close-icon" src="@/static/video/close-icon.png" style="visibility: hidden;" mode="aspectFit"></image>
+    </view>
+    <video 
+      id="myVideo"
+       v-if="src"
+      :src="src" 
+      :autoplay="true" 
+      :style="boxStyle" 
+      :enable-progress-gesture="false" 
+      :page-gesture="false"
+      :controls="true" 
+      :http-cache="true" 
+      :show-loading="false" 
+      :show-fullscreen-btn="false"
+      :show-center-play-btn="false" 
+      :loop="true"
+    ></video>
+    <view class="anew-btn reset-nvue" :style="`width: ${boxStyle.width};`" v-if="src">
+      <text class="anew-btn-text" style="color: red;" @click="handleAnewBtn()">重新{{sourceType == 'album' ? '选择' : '录制' }}</text>
+      <text class="anew-btn-text" @click="handleAnewStepBtn()">下一步</text>
+    </view>
+  </view>
+</template>
+
+<script>
+  let app = getApp();
+  import config from '@/utils/config.js';
+  import * as api from '@/utils/api.js';
+  export default {
+    data() {
+      return {
+        src:'',
+        duration:0,
+        boxStyle: { //视频，图片封面样式🌟💗
+         	'height': 0,
+          'width': 0,
+        },
+        sourceType:'album',
+        isChooseVideo:false,
+        videoContext:{},
+        topBarHeight:0,
+      };
+    },
+    onLoad(options) {
+      if(options.sourceType){
+        this.sourceType = options.sourceType;
+        // this.isChooseVideo = true;
+      }
+      // #ifdef APP-PLUS
+        this.topBarHeight = plus.navigator.getStatusbarHeight()
+      // #endif
+      this.boxStyle.width = uni.getSystemInfoSync().screenWidth + 'px' //获取屏幕宽度
+      this.boxStyle.height = uni.getSystemInfoSync().screenHeight + 'px' //获取屏幕高度
+      this.handleChooseVideo();
+    },
+    onUnload() {
+      this.isChooseVideo = false;
+    },
+    methods: {
+      // 选择视频，录制视频共用方法
+      handleChooseVideo(){
+        uni.chooseVideo({
+          sourceType: [this.sourceType],
+          success:(res)=> {
+            this.videoContext = uni.createVideoContext('myVideo',this);
+            this.src = res.tempFilePath;
+            this.duration = res.duration
+            this.isChooseVideo = false;
+          },
+          fail:(err)=> {
+            // 如果没选择视频就返回上一页
+            this.isChooseVideo = true;
+            if(this.src == '' && this.isChooseVideo){
+              uni.navigateBack({
+                delta:1
+              })
+            }
+          }
+        });
+      },
+      // 点击关闭发布视频，返回上一页
+      handleCloseVideo(){
+        uni.navigateBack({
+          delta:1
+        })
+      },
+      // 重新选择视频，或者重新录制视频
+      handleAnewBtn(){
+        this.handleChooseVideo();
+      },
+      // 点击下一步
+      async handleAnewStepBtn(){
+        if (this.duration > 60) {
+          uni.showToast({
+            title:'请上传少于60s的视频',
+            icon:"none",
+            duration:1500
+          })
+          return
+        }
+        let data = {
+          file:this.src,
+          name:'file',
+        };
+        const res = await api.fileUpload(data);
+        if(res.code == 1){
+          this.videoContext.pause();
+          uni.navigateTo({
+            url:'./videoIssue/videoIssue' + '?video_url=' + res.data.url,
+          })
+        } else {
+          uni.showToast({
+            title:'上传失败，请稍后再试',
+            icon:"none",
+            duration:1500
+          })
+        }
+      },
+      // handleAnewBtn() {
+      //   let cmr = plus.camera.getCamera() //获取相机对象
+      //   cmr.startVideoCapture(
+      //     //调用拍照方法，获得临时路径
+      //     function(p) {
+      //       plus.io.resolveLocalFileSystemURL(p, function(entry) {
+      //         //通过临时路径，获得文件系统中的文件对象entry
+      //         entry.file(function(file) {
+      //           // console.log('aaaaaa',entry.toRemoteURL())
+      //           // 可通过entry对象的file方法，获取文件数据对象（该文件数据对象仍无法直接使用）
+      //           // axios({
+      //           //   method: 'get',
+      //           //   url: entry.toRemoteURL(),
+      //           //   responseType: 'blob',
+      //           // }).then(res => {
+      //           //   console.log('hhhhhh',res)
+      //           //   let blob = res.data
+      //           //   const uploadFile = new FormData()
+      //           //   uploadFile.append('file', blob)
+      //           //   axios({
+      //           //     method: 'post',
+      //           //     url: '/file/api/Upload',
+      //           //     headers: {
+      //           //       'Content-Type': 'multipart/form-data'
+      //           //     },
+      //           //     data: uploadFile,
+      //           //   })
+      //           // })
+      //           file.close()
+      //         })
+      //       })
+      //     },
+      //     function(error) {
+      //       console.log('---' + 'Capture image failed: ' + error.message)
+      //     },
+      //   )
+      // }
+    }
+  }
+</script>
+
+<style lang="scss" scoped>
+  .add-video-content{
+    .choose-video-navbar{
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 30rpx;
+      padding-right: 30rpx;
+      .close-icon{
+        width: 30rpx;
+        height: 30rpx;
+      }
+      .navbar-title{
+        color: #fff;
+      }
+    }
+    .anew-btn {
+      position: fixed;
+      bottom: 120rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0rpx 60rpx;
+      .anew-btn-text{
+        background: #fff;
+        color: #333;
+        width: 260rpx;
+        text-align: center;
+        padding: 10rpx 0;
+        border-radius: 60rpx;
+        font-size: 28rpx;
+      }
+    }
+  }
+  .video-body {
+    // width: ;
+  }
+
+  
+
+</style>

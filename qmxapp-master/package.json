@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "html2canvas": "^1.4.1",
+    "image-tools": "^1.4.0",
+    "superagent": "^8.0.0",
+    "vue-axios": "^3.4.1",
+    "vue-jsonp": "^2.0.0"
+  }
+}

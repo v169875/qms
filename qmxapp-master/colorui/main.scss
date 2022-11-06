@@ -1,0 +1,73 @@
+body{
+  --page-gray:#F7F7F9;
+  --page-white:#fff;
+}
+
+.text-white{
+  color: #fff;
+}
+.text-black{
+  color: #000000;
+}
+.text-gray{
+  color: #B3B3B3;
+}
+
+.text-333 {
+	color: #333333;
+}
+.text-999{
+  color: #999999;
+}
+.text-666{
+  color: #666666;
+}
+
+// .text-primary{
+//   color:$u-type-primary ;
+// }
+
+.text-bold{
+  font-weight: bold;
+}
+
+.bg-white{
+  background-color: #fff;
+  
+}
+
+// .bg-primary{
+//   background-color: $u-type-primary;
+//   color: #fff;
+// }
+
+.bg-green{
+  background-color:#33AB70;
+  color: #fff;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-l-auto{
+  margin-left:auto ;
+}
+
+.round{
+  border-radius: 50%;
+}
+
+// 定义圆角，历遍1-50
+@for $i from 0 through 50 {
+	// 只要双数和能被5除尽的数
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .radius-#{$i}{
+      border-radius: $i + rpx;
+    }
+  }
+
+}
+

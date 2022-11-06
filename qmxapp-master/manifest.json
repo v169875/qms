@@ -1,0 +1,258 @@
+{
+    "name" : "启明星图",
+    "appid" : "__UNI__ABB9013",
+    "description" : "",
+    "versionName" : "3.28",
+    "versionCode" : 328,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "compatible" : {
+            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持  
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Payment" : {},
+            "VideoPlayer" : {},
+            "Geolocation" : {},
+            "OAuth" : {},
+            "Maps" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SECURE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a" ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "dSYMs" : false,
+                "idfa" : false,
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "获取用户手机相册用于提供相册图片素材",
+                    "NSPhotoLibraryAddUsageDescription" : "将图片保存至手机相册",
+                    "NSCameraUsageDescription" : "获取用户手机相册用于快捷拍照录制功能",
+                    "NSMicrophoneUsageDescription" : "获取麦克风权限为了在拍照录制时采集声音；",
+                    "NSLocationAlwaysAndWhenInUseUsageDescription" : "获取访问位置权限为了本产品使用过程获取位置地址信息",
+                    "NSLocationWhenInUseUsageDescription" : "获取运行期访问位置权限为了本产品使用过程获取位置地址信息",
+                    "NSLocationAlwaysUsageDescription" : "获取后台运行访问位置权限为了本产品使用过程获取位置地址信息"
+                }
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "2e49da71eb3772bd5f4a19017465fa03",
+                        "appkey_android" : "9153fc40d78f301dec87af1ee92bbaa9"
+                    }
+                },
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wx113617ea6c2c79d9",
+                        "UniversalLinks" : "https://h.fqqmx.com/apple-app-site-association"
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "geolocation" : {
+                    "system" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "baidu" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "YVNCL3FCQrUsGFMuS5ykZnm4YGxiCyGk",
+                        "appkey_android" : "8MjI1IFl7GXvrH26WdSD5dyxGh5I798p"
+                    },
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "2e49da71eb3772bd5f4a19017465fa03",
+                        "appkey_android" : "9153fc40d78f301dec87af1ee92bbaa9"
+                    }
+                },
+                "ad" : {},
+                "oauth" : {}
+            },
+            "splashscreen" : {
+                "androidStyle" : "default",
+                "iosStyle" : "common"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        },
+        "nativePlugins" : {
+            "JY-JPush" : {
+                "android_appkey" : "648e9eaa5fd33b4884eaae8e",
+                "android_channel" : "启明星图",
+                "ios_appkey" : "648e9eaa5fd33b4884eaae8e",
+                "ios_channel" : "启明星图",
+                "__plugin_info__" : {
+                    "name" : "【官方推荐】JYJPush极光推送插件 - 极光官方推荐",
+                    "description" : "极光推送Uni版本",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=741",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "741",
+                    "parameters" : {
+                        "android_appkey" : {
+                            "des" : "极光推送的APPKEY",
+                            "key" : "JPUSH_APPKEY",
+                            "value" : ""
+                        },
+                        "android_channel" : {
+                            "des" : "极光推送的渠道名称",
+                            "key" : "JPUSH_CHANNEL",
+                            "value" : ""
+                        },
+                        "ios_appkey" : {
+                            "des" : "极光推送的APPKEY",
+                            "key" : "JPUSH_APPKEY",
+                            "value" : ""
+                        },
+                        "ios_channel" : {
+                            "des" : "极光推送的渠道名称",
+                            "key" : "JPUSH_CHANNEL",
+                            "value" : ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wxf823722dcd93f0d4",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true,
+        "permission" : {}
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "2",
+    "h5" : {
+        "router" : {
+            "mode" : "hash",
+            "base" : "/h5"
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "AVTBZ-QKXCO-EB4WM-SSBJB-BICRF-XPFP3"
+                }
+            }
+        },
+        "devServer" : {
+            // "port" : 8080, //浏览器运行端口
+            "https" : false,
+            "proxy" : {
+                "/baseUrlTest" : {
+                    "target" : "https://qimingxintest.ewangnet.com/",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/baseUrlTest" : ""
+                    }
+                },
+                "/api" : {
+                    "target" : "https://qimingxintest.ewangnet.com/",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/api" : "" //路径重写，将接口路径中以/api开头的部分替换掉
+                    }
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
+    }
+}
+/* 5+App特有相关 */
+

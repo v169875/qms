@@ -1,0 +1,139 @@
+.title {
+	padding: 20rpx 50rpx;
+	font-size: 28rpx;
+	.title-all {
+		color: #3077FB;
+		font-weight: bold;
+		span {
+			margin-left: 15rpx;
+		}
+	}
+}
+.flex {
+	display: flex;
+}
+.flex-c {
+	align-items: center;
+}
+.flex-d {
+	justify-content: space-between;
+}
+.boxsizing {
+	box-sizing: border-box;
+}
+.car-list {
+	margin: 0 20rpx;
+	overflow: scroll;
+	// #ifdef MP-WEIXIN
+	height: calc(100vh - 100rpx);
+	// #endif
+	// #ifdef H5
+	height: calc(100vh - 370rpx);
+	// #endif
+}
+.car-list-item {
+	position: relative;
+	width: 100%;
+	height: 288rpx;
+	background: #FFFFFF;
+	border-radius: 15rpx;
+	padding: 30rpx;
+	margin-bottom: 15rpx;
+	image {
+		width: 170rpx;
+		height: 170rpx;
+		border-radius: 15rpx;
+		margin: 0 36rpx;
+		flex-shrink: 0;
+	}
+}
+.car-list-item-btns {
+	position: absolute;
+	right: 30rpx;
+	bottom: 20rpx;
+	input {
+		width: 80rpx;
+		height: 50rpx;
+		background: #F3F3F3;
+		border-radius: 8rpx;
+		text-align: center;
+		margin: 0 20rpx;
+	}
+}
+.car-list-item-txt {
+	color: #1C1C1C;
+	flex: 1;
+	view {
+		margin-bottom: 18rpx;
+	}
+	.car-list-item-name {
+		font-size: 28rpx;
+	}
+	.car-list-item-js {
+		width: 100%;
+		font-size: 22rpx;
+		color: #888888;
+		// overflow: hidden;
+		text-overflow: ellipsis;
+		// white-space: nowrap;
+		display:-webkit-box;
+		overflow:hidden;
+		-webkit-line-clamp:3;
+		-webkit-box-orient:vertical;
+	}
+	.goods-price {
+		color: #3077FB;
+		font-weight: bold;
+		margin-top: 50rpx;
+		font-size: 34rpx;
+		span {
+			font-size: 24rpx;
+		}
+	}
+}
+.goods-img {
+	align-self: flex-start;
+}
+.checkbox {
+	align-self: center;
+}
+.choose-all {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 88rpx;
+	background: #FFFFFF;
+	border-radius: 15rpx 15rpx 0px 0px;
+	padding: 0 27rpx;
+	.go-js {
+		background: #3077FB;
+		border-radius: 40rpx;
+		color: #FFFFFF;
+		padding: 20rpx 30rpx;
+	}
+	span {
+		margin-left: 14rpx;
+	}
+}
+.del-icon {
+	position: absolute;
+	right: 30rpx;
+	top: calc(50% - 22rpx);
+}
+.icon-checked,.icon-nochecked {
+	width: 32px;
+	height: 32px;
+	border: 1px solid #8B8B8B;
+	border-radius: 50%;
+	opacity: 1;
+}
+/deep/ .u-icon-minus {
+	background-color: #fff !important;
+}
+/deep/ .u-icon-plus {
+	background-color: #fff !important;
+}
+/deep/ .u-number-input {
+	font-size: 28rpx;
+	font-weight: bold;
+}
